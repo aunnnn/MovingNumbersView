@@ -7,9 +7,11 @@ Also used in the Robinhood-like line plot library [RHLinePlot](https://github.co
 
 ## How it was done
 
-Basically there are one view for each digit, comma, dot, and minus sign. Check out [`VisualElementType`](https://github.com/aunnnn/MovingNumbersView/blob/master/MovingNumberView/MovingNumbersView%2BComponents.swift) enum.
+Basically there are one view for each digit, comma, dot, and minus sign, all centered in a `HStack` by default. Check out [`VisualElementType`](https://github.com/aunnnn/MovingNumbersView/blob/master/MovingNumberView/MovingNumbersView%2BComponents.swift) enum.
 
-Try removing the mask and see it in action:
+![Graph](https://raw.githubusercontent.com/aunnnn/MovingNumbersView/master/mvn-diagram.jpeg)
+
+To show a number, we move only the vertical digit stack up and down to the right offset. Try removing the mask and see it in action:
 
 ![How](https://raw.githubusercontent.com/aunnnn/MovingNumbersView/master/mvn-how.gif)
 
