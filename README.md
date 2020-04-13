@@ -1,7 +1,9 @@
 # MovingNumbersView
 Moving numbers effect like Robinhood app in SwiftUI.
 
-Used in the [RHLinePlot](https://github.com/aunnnn/RHLinePlot) demo.
+![Demo](https://raw.githubusercontent.com/aunnnn/MovingNumbersView/master/mvn-demo.gif)
+
+Also used in the Robinhood-like line plot library [RHLinePlot](https://github.com/aunnnn/RHLinePlot) demo.
 
 ## Features
 - Dynamic decimal places
@@ -10,5 +12,3 @@ Used in the [RHLinePlot](https://github.com/aunnnn/RHLinePlot) demo.
 
 ## Installation
 Just use or customize the source however you like.
-
-![Demo](https://raw.githubusercontent.com/aunnnn/RHLinePlot/master/rhplot-demo.gif)
