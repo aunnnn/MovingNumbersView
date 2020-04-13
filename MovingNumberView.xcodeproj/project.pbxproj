@@ -7,16 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30622AAE24442A630082C51A /* MovingNumbersView+Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30622AAD24442A630082C51A /* MovingNumbersView+Components.swift */; };
 		30D725F82443C302002DEABD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D725F72443C302002DEABD /* AppDelegate.swift */; };
 		30D725FA2443C302002DEABD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D725F92443C302002DEABD /* SceneDelegate.swift */; };
 		30D725FC2443C302002DEABD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D725FB2443C302002DEABD /* ContentView.swift */; };
 		30D725FE2443C303002DEABD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30D725FD2443C303002DEABD /* Assets.xcassets */; };
 		30D726012443C303002DEABD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30D726002443C303002DEABD /* Preview Assets.xcassets */; };
 		30D726042443C303002DEABD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30D726022443C303002DEABD /* LaunchScreen.storyboard */; };
+		30D7260C2443C317002DEABD /* MovingNumbersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D7260B2443C317002DEABD /* MovingNumbersView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		30D725F42443C302002DEABD /* MovingNumberView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovingNumberView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		30622AAD24442A630082C51A /* MovingNumbersView+Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MovingNumbersView+Components.swift"; sourceTree = "<group>"; };
+		30D725F42443C302002DEABD /* MovingNumbersView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovingNumbersView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30D725F72443C302002DEABD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30D725F92443C302002DEABD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		30D725FB2443C302002DEABD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		30D726002443C303002DEABD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		30D726032443C303002DEABD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		30D726052443C303002DEABD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30D7260B2443C317002DEABD /* MovingNumbersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovingNumbersView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +52,7 @@
 		30D725F52443C302002DEABD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				30D725F42443C302002DEABD /* MovingNumberView.app */,
+				30D725F42443C302002DEABD /* MovingNumbersView.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -57,8 +61,10 @@
 			isa = PBXGroup;
 			children = (
 				30D725F72443C302002DEABD /* AppDelegate.swift */,
-				30D725F92443C302002DEABD /* SceneDelegate.swift */,
 				30D725FB2443C302002DEABD /* ContentView.swift */,
+				30D7260B2443C317002DEABD /* MovingNumbersView.swift */,
+				30622AAD24442A630082C51A /* MovingNumbersView+Components.swift */,
+				30D725F92443C302002DEABD /* SceneDelegate.swift */,
 				30D725FD2443C303002DEABD /* Assets.xcassets */,
 				30D726022443C303002DEABD /* LaunchScreen.storyboard */,
 				30D726052443C303002DEABD /* Info.plist */,
@@ -92,7 +98,7 @@
 			);
 			name = MovingNumberView;
 			productName = MovingNumberView;
-			productReference = 30D725F42443C302002DEABD /* MovingNumberView.app */;
+			productReference = 30D725F42443C302002DEABD /* MovingNumbersView.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -147,6 +153,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				30D725F82443C302002DEABD /* AppDelegate.swift in Sources */,
+				30D7260C2443C317002DEABD /* MovingNumbersView.swift in Sources */,
+				30622AAE24442A630082C51A /* MovingNumbersView+Components.swift in Sources */,
 				30D725FA2443C302002DEABD /* SceneDelegate.swift in Sources */,
 				30D725FC2443C302002DEABD /* ContentView.swift in Sources */,
 			);
@@ -294,7 +302,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.aunnnn.MovingNumberView;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MovingNumbersView;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -314,7 +322,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.aunnnn.MovingNumberView;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MovingNumbersView;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

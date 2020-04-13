@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  MovingNumberView
+//  MovingNumbersView
 //
 //  Created by Wirawit Rueopas on 4/12/20.
 //  Copyright © 2020 Wirawit Rueopas. All rights reserved.
