@@ -9,12 +9,12 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var numberOfDecimalPlaces: Double = 2
+    @State var numberOfDecimalPlaces: Int = 2
     @State var value: Double = 19
     let presetNumbers: [Double] = [
         0,9,
-        10,19,29,99,
-        129,
+        10,19,99,
+        199,
         100.2354,
         199.99,
         -12345,
@@ -31,21 +31,14 @@ struct ContentView: View {
                     Slider(value: $value, in: (0...10_000))
                 }
                 VStack {
-                    Text("Decimal places \(Int(numberOfDecimalPlaces)):")
-                    Slider(value: $numberOfDecimalPlaces, in: (0...6))
+                    Stepper("Decimal places (\(numberOfDecimalPlaces))", value: $numberOfDecimalPlaces, in: 0...6)
                 }
             }.padding()
-            ForEach(presetNumbers, id: \.self) { num in
-                Button(action: {
-                    self.value = num
-                }) {
-                    Text("\(num)")
-                }
-            }
+            Text("Fixed Width (better animation)")
             HStack {
                 MovingNumbersView(
                     number: value,
-                    numberOfDecimalPlaces: Int(numberOfDecimalPlaces),
+                    numberOfDecimalPlaces: numberOfDecimalPlaces,
                     verticalDigitSpacing: 0,
                     fixedWidth: 300
                 ) { s in
@@ -64,14 +57,22 @@ struct ContentView: View {
                     .border(Color.red, width: 2)
                 
             }
+            Text("Dynamic Width")
             HStack {
                 MovingNumbersView(
                     number: value,
-                    numberOfDecimalPlaces: Int(numberOfDecimalPlaces),
+                    numberOfDecimalPlaces: numberOfDecimalPlaces,
                     verticalDigitSpacing: 0
                 ) { s in
                     Text(s)
                 }.border(Color.red, width: 2)
+            }
+            ForEach(presetNumbers, id: \.self) { num in
+                Button(action: {
+                    self.value = num
+                }) {
+                    Text("\(num)")
+                }
             }
         }
     }
