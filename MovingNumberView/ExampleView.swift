@@ -12,6 +12,7 @@ struct ExampleView: View {
     
     @State private var number: Double = 0
     @State private var decimalPlaces = 2
+    @State private var isEmojiMode = false
     
     private let presets: [Double] = [
         1,
@@ -34,8 +35,8 @@ struct ExampleView: View {
                     MovingNumbersView(
                         number: number,
                         numberOfDecimalPlaces: decimalPlaces,
-                        fixedWidth: 300) { str in
-                            Text(str)
+                        fixedWidth: 350) { str in
+                            Text(self.isEmojiMode ? self.customLabelMapping(str) : str)
                                 .font(.largeTitle)
                                 .fontWeight(.heavy)
                     }
@@ -45,6 +46,9 @@ struct ExampleView: View {
                     Text("\(number)")
                     Slider(value: $number, in: (0...1_000_000))
                     Stepper("Decimal: \(decimalPlaces)", value: $decimalPlaces, in: (0...10))
+                    Toggle(isOn: $isEmojiMode) {
+                        Text("Emoji?")
+                    }
                 }
                 
                 Section(header: Text("Presets")) {
@@ -53,6 +57,12 @@ struct ExampleView: View {
                 }
             }
         }
+    }
+    
+    private func customLabelMapping(_ label: String) -> String {
+        guard let number = Int(label) else { return label }
+        let emojis = ["😀", "😁", "😂", "🤣", "😃", "😄", "😅", "😆", "😉", "😊"]
+        return emojis[number]
     }
     
     private func presetView() -> some View {

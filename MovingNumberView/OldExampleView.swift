@@ -54,7 +54,6 @@ struct OldExampleView: View {
                         Gradient.Stop(color: .clear, location: 1.0)]),
                     startPoint: .top,
                     endPoint: .bottom))
-                    .border(Color.red, width: 2)
                 
             }
             Text("Dynamic Width")
