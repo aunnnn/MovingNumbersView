@@ -7,6 +7,7 @@ Also used in the Robinhood-like line plot library [RHLinePlot](https://github.co
 
 ## Features :sparkles:
 - Smooth digit transition
+- Custom digit view builder
 - Dynamic decimal places
 - Support commas
 - Support negative numbers
