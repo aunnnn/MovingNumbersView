@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  OldExampleView.swift
 //  MovingNumbersView
 //
 //  Created by Wirawit Rueopas on 4/12/20.
@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct OldExampleView: View {
     @State var numberOfDecimalPlaces: Int = 2
     @State var value: Double = 19
     let presetNumbers: [Double] = [
@@ -78,8 +78,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct OldExampleView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        OldExampleView()
     }
 }
