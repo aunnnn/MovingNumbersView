@@ -1,7 +1,7 @@
 # MovingNumbersView
 Moving numbers effect like Robinhood app in SwiftUI.
 
-![Demo](https://raw.githubusercontent.com/aunnnn/MovingNumbersView/master/mvn-demo.gif)
+![Demo](https://raw.githubusercontent.com/aunnnn/MovingNumbersView/master/mvndemo2.gif)
 
 Also used in the Robinhood-like line plot library [RHLinePlot](https://github.com/aunnnn/RHLinePlot) demo.
 
