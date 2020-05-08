@@ -10,16 +10,20 @@ import SwiftUI
 
 struct ExampleView: View {
     
-    @State private var number = 40.039
+    @State private var number: Double = 0
     @State private var decimalPlaces = 2
     
     private let presets: [Double] = [
-        0.0099,
-        0.099,
+        1,
+        7,
         9,
+        39,
         99,
         319,
         999,
+        0.0099,
+        0.099,
+        1234.567,
         1_234_567
     ]
     
@@ -39,7 +43,7 @@ struct ExampleView: View {
                 
                 Section {
                     Text("\(number)")
-                    Slider(value: $number, in: (0...100_000))
+                    Slider(value: $number, in: (0...1_000_000))
                     Stepper("Decimal: \(decimalPlaces)", value: $decimalPlaces, in: (0...10))
                 }
                 

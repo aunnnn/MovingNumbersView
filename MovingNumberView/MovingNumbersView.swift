@@ -243,7 +243,6 @@ extension MovingNumbersView {
             .modifier(VerticalShift(
                 diffNumber: digit,
                 digitSpacing: verticalDigitSpacing))
-//            .drawingGroup()
         return ds
     }
     
@@ -264,7 +263,7 @@ extension MovingNumbersView {
         var spacing: CGFloat? = nil
         let elementBuilder: (String) -> Element
         var body: some View {
-            VStack(alignment: .leading, spacing: spacing) {
+            VStack(alignment: .center, spacing: spacing) {
                 ForEach((0...9).reversed(), id: \.self) { iDigit in
                     self.elementBuilder("\(iDigit)")
                 }
