@@ -1,9 +1,38 @@
-# MovingNumbersView
-Moving numbers effect like Robinhood app in SwiftUI.
+# MovingNumberView
+Moving numbers effect in SwiftUI.
 
-![Demo](https://raw.githubusercontent.com/aunnnn/MovingNumbersView/master/mvn-demo.gif)
+![Demo](https://raw.githubusercontent.com/aunnnn/MovingNumbersView/master/mvndemo2.gif)
 
 Also used in the Robinhood-like line plot library [RHLinePlot](https://github.com/aunnnn/RHLinePlot) demo.
+
+## Features :sparkles:
+- Smooth digit transition
+- Custom digit view builder
+- Dynamic decimal places
+- Support commas
+- Support negative numbers
+
+## Usage
+
+Initialize it with `number`, `numberOfDecimalPlaces`, and trailing closure `elementBuilder`:
+```swift
+MovingNumbersView(
+    number: 123.456,
+    numberOfDecimalPlaces: 3) { str in
+        // How to build each character
+        Text(str)
+            .font(.largeTitle)
+}
+```
+
+The `elementBuilder: (String) -> some View` will be used by the library to build each visual element such as digits, dots, and commas. You can return any `View`, so the text style is fully customizable.
+
+Optional parameters are `fixedWidth`, `verticalDigitSpacing`, and `animationDuration`. `verticalDigitSpacing` allows you to control the spacing between digits in the vertical digit stack, and `animationDuration` is the duration for the vertical digit stack to move up and down.
+
+`fixedWidth: CGFloat?` is important. It will give a fixed width to the label to give space for digit transitioning. Without it, when the last few digits are moving in and out, *the label frame shrinks faster that the transition* so you could see them getting cropped out. Setting this value will help make the transition/animation effect looks better.
+
+## Installation
+Drag [MovingNumbersView.swift](https://github.com/aunnnn/MovingNumbersView/blob/master/MovingNumberView/MovingNumbersView.swift) to your project. Use and customize however you like.
 
 ## How it was done
 
@@ -23,12 +52,3 @@ For example, `-1,234.56 -> ids = [1(-), 40, 35(,), 30, 20, 10, 0(.), -10, -20]`.
 
 This scheme allows SwiftUI to calculate the right insertion/removal transitioning. 
 Moving from 9 to 19 is moving from `ids = [10("9")]` to `ids = [20("1"), 10("9")]`. That is, we don't animate `9` to `1`, but simply bring in a new `1`.
-
-
-## Features
-- Dynamic decimal places
-- Support commas
-- Support negative numbers
-
-## Installation
-Just use or customize the source however you like.
