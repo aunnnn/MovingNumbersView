@@ -20,6 +20,7 @@ struct MovingNumbersView<Element: View>: View {
     /// Space between each digit in the 10-digit vertical stack
     var verticalDigitSpacing: CGFloat = 0
     
+    /// Animation duration for the vertical digit stack to move up and down
     var animationDuration: Double = 0.25
     
     /// Give a fixed width to the view. This would give better transition effect as digits are not clipped off.
