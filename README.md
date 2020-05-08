@@ -1,4 +1,4 @@
-# MovingNumbersView
+# MovingNumberView
 Moving numbers effect in SwiftUI.
 
 ![Demo](https://raw.githubusercontent.com/aunnnn/MovingNumbersView/master/mvndemo2.gif)
