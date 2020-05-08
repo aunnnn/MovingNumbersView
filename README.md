@@ -3,12 +3,17 @@ Moving numbers effect in SwiftUI.
 
 ![Demo](https://raw.githubusercontent.com/aunnnn/MovingNumbersView/master/mvndemo2.gif)
 
-Also used in the Robinhood-like line plot library [RHLinePlot](https://github.com/aunnnn/RHLinePlot) demo.
+Custom element:
+
+![emojidemo](https://raw.githubusercontent.com/aunnnn/MovingNumbersView/master/mvnemoji.gif)
+
+Also used in the Robinhood-like line plot library [RHLinePlot](https://github.com/aunnnn/RHLinePlot).
 
 ## Features :sparkles:
 - Smooth digit transition
 - Custom digit view builder
 - Dynamic decimal places
+- Support integer (just set to 0 decimal place)
 - Support commas
 - Support negative numbers
 
@@ -24,6 +29,7 @@ MovingNumbersView(
             .font(.largeTitle)
 }
 ```
+To display whole numbers, just set `numberOfDecimalPlaces` to `0`.
 
 The `elementBuilder: (String) -> some View` will be used by the library to build each visual element such as digits, dots, and commas. You can return any `View`, so the text style is fully customizable.
 
