@@ -1,9 +1,18 @@
 # MovingNumbersView
-Moving numbers effect like Robinhood app in SwiftUI.
+Moving numbers effect in SwiftUI.
 
 ![Demo](https://raw.githubusercontent.com/aunnnn/MovingNumbersView/master/mvndemo2.gif)
 
 Also used in the Robinhood-like line plot library [RHLinePlot](https://github.com/aunnnn/RHLinePlot) demo.
+
+## Features :sparkles:
+- Smooth digit transition
+- Dynamic decimal places
+- Support commas
+- Support negative numbers
+
+## Installation
+Drag [MovingNumberView.swift](https://github.com/aunnnn/MovingNumbersView/blob/master/MovingNumberView/MovingNumbersView.swift) to your project. Use and customize however you like.
 
 ## How it was done
 
@@ -23,12 +32,3 @@ For example, `-1,234.56 -> ids = [1(-), 40, 35(,), 30, 20, 10, 0(.), -10, -20]`.
 
 This scheme allows SwiftUI to calculate the right insertion/removal transitioning. 
 Moving from 9 to 19 is moving from `ids = [10("9")]` to `ids = [20("1"), 10("9")]`. That is, we don't animate `9` to `1`, but simply bring in a new `1`.
-
-
-## Features
-- Dynamic decimal places
-- Support commas
-- Support negative numbers
-
-## Installation
-Just use or customize the source however you like.
