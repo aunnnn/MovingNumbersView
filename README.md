@@ -40,11 +40,11 @@ Optional parameters are `fixedWidth`*, `verticalDigitSpacing`, and `animationDur
 It will also leading align the digits, otherwise with the default value (`nil`), the `MovingNumbersView` will shrink and expand at the center since its size depends on the number of current visual elements and make the transitioning weird. While this could be fixed by putting it under a `VStack` with leading alignment, the former cropping problem is still there.
 
 ## Installation
-Drag [MovingNumbersView.swift](https://github.com/aunnnn/MovingNumbersView/blob/master/MovingNumberView/MovingNumbersView.swift) to your project. Use and customize however you like.
+Drag [MovingNumbersView.swift](https://github.com/aunnnn/MovingNumbersView/blob/master/Sources/MovingNumbersView/MovingNumbersView.swift) to your project. Use and customize however you like.
 
 ## How it was done
 
-Basically there are one view for each digit, comma, dot, and minus sign, all centered in a `HStack` by default. Check out [`VisualElementType`](https://github.com/aunnnn/MovingNumbersView/blob/master/MovingNumberView/MovingNumbersView%2BComponents.swift) enum.
+Basically there are one view for each digit, comma, dot, and minus sign, all centered in a `HStack` by default. Check out [`VisualElementType`](https://github.com/aunnnn/MovingNumbersView/blob/master/Sources/MovingNumbersView/MovingNumbersView.swift#L144) enum.
 
 ![Graph](https://raw.githubusercontent.com/aunnnn/MovingNumbersView/master/README-Resources/mvn-diagram.jpeg)
 
