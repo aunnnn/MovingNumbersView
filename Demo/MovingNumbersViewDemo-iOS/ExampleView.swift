@@ -7,7 +7,9 @@
 //
 
 import SwiftUI
+import MovingNumbersView
 
+/// Doesn't look good in macOS demo though. Also the number slider will make the effect frozen when you drag on macOS, not sure why.
 struct ExampleView: View {
     
     @State private var number: Double = 0

@@ -1,9 +1,8 @@
 //
 //  SceneDelegate.swift
-//  MovingNumbersView
+//  MovingNumbersViewDemo
 //
-//  Created by Wirawit Rueopas on 4/12/20.
-//  Copyright © 2020 Wirawit Rueopas. All rights reserved.
+//  Created by Wirawit Rueopas on 5/10/20.
 //
 
 import UIKit

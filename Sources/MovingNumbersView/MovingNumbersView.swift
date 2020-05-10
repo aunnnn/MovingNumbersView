@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+@available(iOS 13.0, OSX 10.15, *)
 public struct MovingNumbersView<Element: View>: View {
     /// The number to show.
     public let number: Double
@@ -53,7 +54,7 @@ public struct MovingNumbersView<Element: View>: View {
         self.elementBuilder = elementBuilder
     }
     
-    func movingNumbersView() -> some View {
+    private func movingNumbersView() -> some View {
         let isNegative = self.number < 0
         
         // Deal with positive first
@@ -138,6 +139,7 @@ public struct MovingNumbersView<Element: View>: View {
     }
 }
 
+@available(iOS 13.0, OSX 10.15, *)
 private extension MovingNumbersView {
     enum VisualElementType: CustomDebugStringConvertible, Identifiable {
         case digit(Int, position: Int)

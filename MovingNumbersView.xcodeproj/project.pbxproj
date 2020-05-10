@@ -3,205 +3,560 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		"MovingNumbersView::MovingNumbersViewPackageTests::ProductTarget" /* MovingNumbersViewPackageTests */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = OBJ_40 /* Build configuration list for PBXAggregateTarget "MovingNumbersViewPackageTests" */;
+			buildPhases = (
+			);
+			dependencies = (
+				OBJ_43 /* PBXTargetDependency */,
+			);
+			name = MovingNumbersViewPackageTests;
+			productName = MovingNumbersViewPackageTests;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
-		309B2E6E2465296700465900 /* ExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309B2E6D2465296700465900 /* ExampleView.swift */; };
-		30D725F82443C302002DEABD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D725F72443C302002DEABD /* AppDelegate.swift */; };
-		30D725FA2443C302002DEABD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D725F92443C302002DEABD /* SceneDelegate.swift */; };
-		30D725FC2443C302002DEABD /* OldExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D725FB2443C302002DEABD /* OldExampleView.swift */; };
-		30D725FE2443C303002DEABD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30D725FD2443C303002DEABD /* Assets.xcassets */; };
-		30D726012443C303002DEABD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30D726002443C303002DEABD /* Preview Assets.xcassets */; };
-		30D726042443C303002DEABD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30D726022443C303002DEABD /* LaunchScreen.storyboard */; };
-		30D7260C2443C317002DEABD /* MovingNumbersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D7260B2443C317002DEABD /* MovingNumbersView.swift */; };
+		3063B2EA2468C23E00DB7F67 /* ExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308E64202468C1120054D0F3 /* ExampleView.swift */; };
+		308E63FC2468BC340054D0F3 /* MovingNumbersView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "MovingNumbersView::MovingNumbersView::Product" /* MovingNumbersView.framework */; };
+		308E63FD2468BC340054D0F3 /* MovingNumbersView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "MovingNumbersView::MovingNumbersView::Product" /* MovingNumbersView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		308E64192468BFE40054D0F3 /* MovingNumbersView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "MovingNumbersView::MovingNumbersView::Product" /* MovingNumbersView.framework */; };
+		308E641A2468BFE40054D0F3 /* MovingNumbersView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "MovingNumbersView::MovingNumbersView::Product" /* MovingNumbersView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		308E642B2468C1120054D0F3 /* ExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308E64202468C1120054D0F3 /* ExampleView.swift */; };
+		308E642C2468C1120054D0F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 308E64222468C1120054D0F3 /* Assets.xcassets */; };
+		308E642D2468C1120054D0F3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 308E64242468C1120054D0F3 /* Preview Assets.xcassets */; };
+		308E642E2468C1120054D0F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 308E64252468C1120054D0F3 /* LaunchScreen.storyboard */; };
+		308E64302468C1120054D0F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308E64282468C1120054D0F3 /* AppDelegate.swift */; };
+		308E64322468C1120054D0F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308E642A2468C1120054D0F3 /* SceneDelegate.swift */; };
+		308E643D2468C1260054D0F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 308E64342468C1260054D0F3 /* Assets.xcassets */; };
+		308E643E2468C1260054D0F3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 308E64362468C1260054D0F3 /* Preview Assets.xcassets */; };
+		308E643F2468C1260054D0F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 308E64372468C1260054D0F3 /* Main.storyboard */; };
+		308E64402468C1260054D0F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308E643A2468C1260054D0F3 /* AppDelegate.swift */; };
+		308E64412468C1260054D0F3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308E643B2468C1260054D0F3 /* ContentView.swift */; };
+		OBJ_31 /* MovingNumbersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* MovingNumbersView.swift */; };
+		OBJ_38 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
+		OBJ_49 /* MovingNumbersViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* MovingNumbersViewTests.swift */; };
+		OBJ_50 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* XCTestManifests.swift */; };
+		OBJ_52 /* MovingNumbersView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "MovingNumbersView::MovingNumbersView::Product" /* MovingNumbersView.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		308E63DD2468B85B0054D0F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "MovingNumbersView::MovingNumbersView";
+			remoteInfo = MovingNumbersView;
+		};
+		308E63DE2468B85C0054D0F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "MovingNumbersView::MovingNumbersViewTests";
+			remoteInfo = MovingNumbersViewTests;
+		};
+		308E63FE2468BC340054D0F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "MovingNumbersView::MovingNumbersView";
+			remoteInfo = MovingNumbersView;
+		};
+		308E641B2468BFE40054D0F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "MovingNumbersView::MovingNumbersView";
+			remoteInfo = MovingNumbersView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		308E64002468BC350054D0F3 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				308E63FD2468BC340054D0F3 /* MovingNumbersView.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		308E641D2468BFE40054D0F3 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				308E641A2468BFE40054D0F3 /* MovingNumbersView.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		309B2E6D2465296700465900 /* ExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleView.swift; sourceTree = "<group>"; };
-		309FDA252468B34600548351 /* MovingNumbersView.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MovingNumbersView.entitlements; sourceTree = "<group>"; };
-		30D725F42443C302002DEABD /* MovingNumbersView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovingNumbersView.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		30D725F72443C302002DEABD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		30D725F92443C302002DEABD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		30D725FB2443C302002DEABD /* OldExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldExampleView.swift; sourceTree = "<group>"; };
-		30D725FD2443C303002DEABD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		30D726002443C303002DEABD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		30D726032443C303002DEABD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		30D726052443C303002DEABD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		30D7260B2443C317002DEABD /* MovingNumbersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovingNumbersView.swift; sourceTree = "<group>"; };
+		308E63E42468B9690054D0F3 /* MovingNumbersViewDemo-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MovingNumbersViewDemo-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		308E64052468BE610054D0F3 /* MovingNumbersViewDemo-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MovingNumbersViewDemo-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		308E64202468C1120054D0F3 /* ExampleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleView.swift; sourceTree = "<group>"; };
+		308E64212468C1120054D0F3 /* MovingNumbersViewDemo.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = MovingNumbersViewDemo.entitlements; sourceTree = "<group>"; };
+		308E64222468C1120054D0F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		308E64242468C1120054D0F3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		308E64262468C1120054D0F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		308E64272468C1120054D0F3 /* OldExampleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OldExampleView.swift; sourceTree = "<group>"; };
+		308E64282468C1120054D0F3 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		308E64292468C1120054D0F3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		308E642A2468C1120054D0F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		308E64342468C1260054D0F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		308E64362468C1260054D0F3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		308E64382468C1260054D0F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		308E64392468C1260054D0F3 /* MovingNumbersViewDemo_macOS.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = MovingNumbersViewDemo_macOS.entitlements; sourceTree = "<group>"; };
+		308E643A2468C1260054D0F3 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		308E643B2468C1260054D0F3 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		308E643C2468C1260054D0F3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		"MovingNumbersView::MovingNumbersView::Product" /* MovingNumbersView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MovingNumbersView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"MovingNumbersView::MovingNumbersViewTests::Product" /* MovingNumbersViewTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = MovingNumbersViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_12 /* MovingNumbersViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovingNumbersViewTests.swift; sourceTree = "<group>"; };
+		OBJ_13 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
+		OBJ_18 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+		OBJ_19 /* mvn-diagram.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "mvn-diagram.jpeg"; sourceTree = "<group>"; };
+		OBJ_20 /* mvn-how.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "mvn-how.gif"; sourceTree = "<group>"; };
+		OBJ_21 /* mvnemoji.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = mvnemoji.gif; sourceTree = "<group>"; };
+		OBJ_22 /* mvndemo2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = mvndemo2.gif; sourceTree = "<group>"; };
+		OBJ_23 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		OBJ_24 /* MovingNumbersView.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MovingNumbersView.entitlements; sourceTree = "<group>"; };
+		OBJ_25 /* mvn-demo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "mvn-demo.gif"; sourceTree = "<group>"; };
+		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		OBJ_9 /* MovingNumbersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovingNumbersView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		30D725F12443C302002DEABD /* Frameworks */ = {
+		308E63E12468B9690054D0F3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				308E63FC2468BC340054D0F3 /* MovingNumbersView.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		308E64022468BE610054D0F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				308E64192468BFE40054D0F3 /* MovingNumbersView.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_32 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_52 /* MovingNumbersView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		309FDA262468B41500548351 /* Source */ = {
+		308E63DF2468B8740054D0F3 /* README-Resources */ = {
 			isa = PBXGroup;
 			children = (
-				309FDA272468B41E00548351 /* MovingNumbersView */,
+				OBJ_19 /* mvn-diagram.jpeg */,
+				OBJ_20 /* mvn-how.gif */,
+				OBJ_21 /* mvnemoji.gif */,
+				OBJ_22 /* mvndemo2.gif */,
+				OBJ_25 /* mvn-demo.gif */,
 			);
-			path = Source;
+			name = "README-Resources";
 			sourceTree = "<group>";
 		};
-		309FDA272468B41E00548351 /* MovingNumbersView */ = {
+		308E63FB2468BC340054D0F3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				30D7260B2443C317002DEABD /* MovingNumbersView.swift */,
 			);
-			path = MovingNumbersView;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		30D725EB2443C302002DEABD = {
+		308E641F2468C1120054D0F3 /* MovingNumbersViewDemo-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				309FDA262468B41500548351 /* Source */,
-				309FDA252468B34600548351 /* MovingNumbersView.entitlements */,
-				30D725F62443C302002DEABD /* MovingNumbersViewDemo */,
-				30D725F52443C302002DEABD /* Products */,
+				308E64202468C1120054D0F3 /* ExampleView.swift */,
+				308E64212468C1120054D0F3 /* MovingNumbersViewDemo.entitlements */,
+				308E64222468C1120054D0F3 /* Assets.xcassets */,
+				308E64232468C1120054D0F3 /* Preview Content */,
+				308E64252468C1120054D0F3 /* LaunchScreen.storyboard */,
+				308E64272468C1120054D0F3 /* OldExampleView.swift */,
+				308E64282468C1120054D0F3 /* AppDelegate.swift */,
+				308E64292468C1120054D0F3 /* Info.plist */,
+				308E642A2468C1120054D0F3 /* SceneDelegate.swift */,
 			);
+			name = "MovingNumbersViewDemo-iOS";
+			path = "Demo/MovingNumbersViewDemo-iOS";
 			sourceTree = "<group>";
 		};
-		30D725F52443C302002DEABD /* Products */ = {
+		308E64232468C1120054D0F3 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				30D725F42443C302002DEABD /* MovingNumbersView.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		30D725F62443C302002DEABD /* MovingNumbersViewDemo */ = {
-			isa = PBXGroup;
-			children = (
-				30D725F72443C302002DEABD /* AppDelegate.swift */,
-				30D725FB2443C302002DEABD /* OldExampleView.swift */,
-				309B2E6D2465296700465900 /* ExampleView.swift */,
-				30D725F92443C302002DEABD /* SceneDelegate.swift */,
-				30D725FD2443C303002DEABD /* Assets.xcassets */,
-				30D726022443C303002DEABD /* LaunchScreen.storyboard */,
-				30D726052443C303002DEABD /* Info.plist */,
-				30D725FF2443C303002DEABD /* Preview Content */,
-			);
-			path = MovingNumbersViewDemo;
-			sourceTree = "<group>";
-		};
-		30D725FF2443C303002DEABD /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				30D726002443C303002DEABD /* Preview Assets.xcassets */,
+				308E64242468C1120054D0F3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		308E64332468C1260054D0F3 /* MovingNumbersViewDemo-macOS */ = {
+			isa = PBXGroup;
+			children = (
+				308E64342468C1260054D0F3 /* Assets.xcassets */,
+				308E64352468C1260054D0F3 /* Preview Content */,
+				308E64372468C1260054D0F3 /* Main.storyboard */,
+				308E64392468C1260054D0F3 /* MovingNumbersViewDemo_macOS.entitlements */,
+				308E643A2468C1260054D0F3 /* AppDelegate.swift */,
+				308E643B2468C1260054D0F3 /* ContentView.swift */,
+				308E643C2468C1260054D0F3 /* Info.plist */,
+			);
+			name = "MovingNumbersViewDemo-macOS";
+			path = "Demo/MovingNumbersViewDemo-macOS";
+			sourceTree = "<group>";
+		};
+		308E64352468C1260054D0F3 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				308E64362468C1260054D0F3 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		OBJ_10 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_11 /* MovingNumbersViewTests */,
+			);
+			name = Tests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_11 /* MovingNumbersViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_12 /* MovingNumbersViewTests.swift */,
+				OBJ_13 /* XCTestManifests.swift */,
+			);
+			name = MovingNumbersViewTests;
+			path = Tests/MovingNumbersViewTests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_14 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				"MovingNumbersView::MovingNumbersViewTests::Product" /* MovingNumbersViewTests.xctest */,
+				"MovingNumbersView::MovingNumbersView::Product" /* MovingNumbersView.framework */,
+				308E63E42468B9690054D0F3 /* MovingNumbersViewDemo-iOS.app */,
+				308E64052468BE610054D0F3 /* MovingNumbersViewDemo-macOS.app */,
+			);
+			name = Products;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		OBJ_5 = {
+			isa = PBXGroup;
+			children = (
+				OBJ_6 /* Package.swift */,
+				OBJ_7 /* Sources */,
+				OBJ_10 /* Tests */,
+				OBJ_14 /* Products */,
+				308E641F2468C1120054D0F3 /* MovingNumbersViewDemo-iOS */,
+				308E64332468C1260054D0F3 /* MovingNumbersViewDemo-macOS */,
+				308E63DF2468B8740054D0F3 /* README-Resources */,
+				OBJ_23 /* README.md */,
+				OBJ_18 /* LICENSE.md */,
+				OBJ_24 /* MovingNumbersView.entitlements */,
+				308E63FB2468BC340054D0F3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		OBJ_7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_8 /* MovingNumbersView */,
+			);
+			name = Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_8 /* MovingNumbersView */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_9 /* MovingNumbersView.swift */,
+			);
+			name = MovingNumbersView;
+			path = Sources/MovingNumbersView;
+			sourceTree = SOURCE_ROOT;
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		30D725F32443C302002DEABD /* MovingNumbersView */ = {
+		308E63E32468B9690054D0F3 /* MovingNumbersViewDemo-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 30D726082443C303002DEABD /* Build configuration list for PBXNativeTarget "MovingNumbersView" */;
+			buildConfigurationList = 308E63F52468B96A0054D0F3 /* Build configuration list for PBXNativeTarget "MovingNumbersViewDemo-iOS" */;
 			buildPhases = (
-				30D725F02443C302002DEABD /* Sources */,
-				30D725F12443C302002DEABD /* Frameworks */,
-				30D725F22443C302002DEABD /* Resources */,
+				308E63E02468B9690054D0F3 /* Sources */,
+				308E63E12468B9690054D0F3 /* Frameworks */,
+				308E63E22468B9690054D0F3 /* Resources */,
+				308E64002468BC350054D0F3 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				308E63FF2468BC340054D0F3 /* PBXTargetDependency */,
+			);
+			name = "MovingNumbersViewDemo-iOS";
+			productName = MovingNumbersViewDemo;
+			productReference = 308E63E42468B9690054D0F3 /* MovingNumbersViewDemo-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		308E64042468BE610054D0F3 /* MovingNumbersViewDemo-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 308E64152468BE640054D0F3 /* Build configuration list for PBXNativeTarget "MovingNumbersViewDemo-macOS" */;
+			buildPhases = (
+				308E64012468BE610054D0F3 /* Sources */,
+				308E64022468BE610054D0F3 /* Frameworks */,
+				308E64032468BE610054D0F3 /* Resources */,
+				308E641D2468BFE40054D0F3 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				308E641C2468BFE40054D0F3 /* PBXTargetDependency */,
+			);
+			name = "MovingNumbersViewDemo-macOS";
+			productName = "MovingNumbersViewDemo-macOS";
+			productReference = 308E64052468BE610054D0F3 /* MovingNumbersViewDemo-macOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		"MovingNumbersView::MovingNumbersView" /* MovingNumbersView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_27 /* Build configuration list for PBXNativeTarget "MovingNumbersView" */;
+			buildPhases = (
+				OBJ_30 /* Sources */,
+				OBJ_32 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = MovingNumbersView;
-			productName = MovingNumberView;
-			productReference = 30D725F42443C302002DEABD /* MovingNumbersView.app */;
-			productType = "com.apple.product-type.application";
+			productName = MovingNumbersView;
+			productReference = "MovingNumbersView::MovingNumbersView::Product" /* MovingNumbersView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"MovingNumbersView::MovingNumbersViewTests" /* MovingNumbersViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_45 /* Build configuration list for PBXNativeTarget "MovingNumbersViewTests" */;
+			buildPhases = (
+				OBJ_48 /* Sources */,
+				OBJ_51 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_53 /* PBXTargetDependency */,
+			);
+			name = MovingNumbersViewTests;
+			productName = MovingNumbersViewTests;
+			productReference = "MovingNumbersView::MovingNumbersViewTests::Product" /* MovingNumbersViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		"MovingNumbersView::SwiftPMPackageDescription" /* MovingNumbersViewPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_34 /* Build configuration list for PBXNativeTarget "MovingNumbersViewPackageDescription" */;
+			buildPhases = (
+				OBJ_37 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MovingNumbersViewPackageDescription;
+			productName = MovingNumbersViewPackageDescription;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		30D725EC2443C302002DEABD /* Project object */ = {
+		OBJ_1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 9999;
 				LastSwiftUpdateCheck = 1140;
-				LastUpgradeCheck = 1140;
-				ORGANIZATIONNAME = "Wirawit Rueopas";
+				LastUpgradeCheck = 9999;
 				TargetAttributes = {
-					30D725F32443C302002DEABD = {
-						CreatedOnToolsVersion = 11.4;
+					308E63E32468B9690054D0F3 = {
+						CreatedOnToolsVersion = 11.4.1;
+						DevelopmentTeam = B786UKMNU5;
+						ProvisioningStyle = Automatic;
+					};
+					308E64042468BE610054D0F3 = {
+						CreatedOnToolsVersion = 11.4.1;
+						DevelopmentTeam = B786UKMNU5;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = 30D725EF2443C302002DEABD /* Build configuration list for PBXProject "MovingNumbersView" */;
-			compatibilityVersion = "Xcode 9.3";
+			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "MovingNumbersView" */;
+			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 30D725EB2443C302002DEABD;
-			productRefGroup = 30D725F52443C302002DEABD /* Products */;
+			mainGroup = OBJ_5;
+			productRefGroup = OBJ_14 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				30D725F32443C302002DEABD /* MovingNumbersView */,
+				"MovingNumbersView::MovingNumbersView" /* MovingNumbersView */,
+				"MovingNumbersView::SwiftPMPackageDescription" /* MovingNumbersViewPackageDescription */,
+				"MovingNumbersView::MovingNumbersViewPackageTests::ProductTarget" /* MovingNumbersViewPackageTests */,
+				"MovingNumbersView::MovingNumbersViewTests" /* MovingNumbersViewTests */,
+				308E63E32468B9690054D0F3 /* MovingNumbersViewDemo-iOS */,
+				308E64042468BE610054D0F3 /* MovingNumbersViewDemo-macOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		30D725F22443C302002DEABD /* Resources */ = {
+		308E63E22468B9690054D0F3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30D726042443C303002DEABD /* LaunchScreen.storyboard in Resources */,
-				30D726012443C303002DEABD /* Preview Assets.xcassets in Resources */,
-				30D725FE2443C303002DEABD /* Assets.xcassets in Resources */,
+				308E642E2468C1120054D0F3 /* LaunchScreen.storyboard in Resources */,
+				308E642D2468C1120054D0F3 /* Preview Assets.xcassets in Resources */,
+				308E642C2468C1120054D0F3 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		308E64032468BE610054D0F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				308E643F2468C1260054D0F3 /* Main.storyboard in Resources */,
+				308E643E2468C1260054D0F3 /* Preview Assets.xcassets in Resources */,
+				308E643D2468C1260054D0F3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		30D725F02443C302002DEABD /* Sources */ = {
+		308E63E02468B9690054D0F3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30D725F82443C302002DEABD /* AppDelegate.swift in Sources */,
-				30D7260C2443C317002DEABD /* MovingNumbersView.swift in Sources */,
-				30D725FA2443C302002DEABD /* SceneDelegate.swift in Sources */,
-				30D725FC2443C302002DEABD /* OldExampleView.swift in Sources */,
-				309B2E6E2465296700465900 /* ExampleView.swift in Sources */,
+				308E64302468C1120054D0F3 /* AppDelegate.swift in Sources */,
+				308E642B2468C1120054D0F3 /* ExampleView.swift in Sources */,
+				308E64322468C1120054D0F3 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		308E64012468BE610054D0F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				308E64412468C1260054D0F3 /* ContentView.swift in Sources */,
+				308E64402468C1260054D0F3 /* AppDelegate.swift in Sources */,
+				3063B2EA2468C23E00DB7F67 /* ExampleView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_31 /* MovingNumbersView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_38 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_48 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_49 /* MovingNumbersViewTests.swift in Sources */,
+				OBJ_50 /* XCTestManifests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		308E63FF2468BC340054D0F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "MovingNumbersView::MovingNumbersView" /* MovingNumbersView */;
+			targetProxy = 308E63FE2468BC340054D0F3 /* PBXContainerItemProxy */;
+		};
+		308E641C2468BFE40054D0F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "MovingNumbersView::MovingNumbersView" /* MovingNumbersView */;
+			targetProxy = 308E641B2468BFE40054D0F3 /* PBXContainerItemProxy */;
+		};
+		OBJ_43 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "MovingNumbersView::MovingNumbersViewTests" /* MovingNumbersViewTests */;
+			targetProxy = 308E63DE2468B85C0054D0F3 /* PBXContainerItemProxy */;
+		};
+		OBJ_53 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "MovingNumbersView::MovingNumbersView" /* MovingNumbersView */;
+			targetProxy = 308E63DD2468B85B0054D0F3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
-		30D726022443C303002DEABD /* LaunchScreen.storyboard */ = {
+		308E64252468C1120054D0F3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				30D726032443C303002DEABD /* Base */,
+				308E64262468C1120054D0F3 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		308E64372468C1260054D0F3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				308E64382468C1260054D0F3 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		30D726062443C303002DEABD /* Debug */ = {
+		308E63F62468B96A0054D0F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -224,14 +579,16 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				CODE_SIGN_ENTITLEMENTS = "Demo/MovingNumbersViewDemo-iOS/MovingNumbersViewDemo.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Demo/MovingNumbersViewDemo-iOS/Preview Content\"";
+				DEVELOPMENT_TEAM = B786UKMNU5;
+				ENABLE_PREVIEWS = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -242,26 +599,30 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				INFOPLIST_FILE = "Demo/MovingNumbersViewDemo-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aunnnn.MovingNumbersViewDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		30D726072443C303002DEABD /* Release */ = {
+		308E63F72468B96A0054D0F3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -284,9 +645,13 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = "Demo/MovingNumbersViewDemo-iOS/MovingNumbersViewDemo.entitlements";
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_ASSET_PATHS = "\"Demo/MovingNumbersViewDemo-iOS/Preview Content\"";
+				DEVELOPMENT_TEAM = B786UKMNU5;
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_PREVIEWS = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -296,84 +661,407 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				INFOPLIST_FILE = "Demo/MovingNumbersViewDemo-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				PRODUCT_BUNDLE_IDENTIFIER = com.aunnnn.MovingNumbersViewDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		30D726092443C303002DEABD /* Debug */ = {
+		308E64162468BE640054D0F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = MovingNumbersView.entitlements;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = "Demo/MovingNumbersViewDemo-macOS/MovingNumbersViewDemo_macOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"MovingNumbersViewDemo/Preview Content\"";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"Demo/MovingNumbersViewDemo-macOS/Preview Content\"";
 				DEVELOPMENT_TEAM = B786UKMNU5;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = MovingNumbersViewDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
 					"$(inherited)",
-					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.aunnnn.MovingNumbersView;
-				PRODUCT_NAME = MovingNumbersView;
-				SUPPORTS_MACCATALYST = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Demo/MovingNumbersViewDemo-macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aunnnn.MovingNumbersViewDemo-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		30D7260A2443C303002DEABD /* Release */ = {
+		308E64172468BE640054D0F3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = MovingNumbersView.entitlements;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = "Demo/MovingNumbersViewDemo-macOS/MovingNumbersViewDemo_macOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"MovingNumbersViewDemo/Preview Content\"";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_ASSET_PATHS = "\"Demo/MovingNumbersViewDemo-macOS/Preview Content\"";
 				DEVELOPMENT_TEAM = B786UKMNU5;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = MovingNumbersViewDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Demo/MovingNumbersViewDemo-macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aunnnn.MovingNumbersViewDemo-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		OBJ_28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/Frameworks",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.aunnnn.MovingNumbersView;
-				PRODUCT_NAME = MovingNumbersView;
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = MovingNumbersView.xcodeproj/MovingNumbersView_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = MovingNumbersView;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGET_NAME = MovingNumbersView;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		OBJ_29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = MovingNumbersView.xcodeproj/MovingNumbersView_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = MovingNumbersView;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGET_NAME = MovingNumbersView;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		OBJ_3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"SWIFT_PACKAGE=1",
+					"DEBUG=1",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE DEBUG";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USE_HEADERMAP = NO;
+			};
+			name = Debug;
+		};
+		OBJ_35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5.2.0";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		OBJ_36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5.2.0";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		OBJ_4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"SWIFT_PACKAGE=1",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				USE_HEADERMAP = NO;
+			};
+			name = Release;
+		};
+		OBJ_41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		OBJ_42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		OBJ_46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = MovingNumbersView.xcodeproj/MovingNumbersViewTests_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = MovingNumbersViewTests;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		OBJ_47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = MovingNumbersView.xcodeproj/MovingNumbersViewTests_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = MovingNumbersViewTests;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		30D725EF2443C302002DEABD /* Build configuration list for PBXProject "MovingNumbersView" */ = {
+		308E63F52468B96A0054D0F3 /* Build configuration list for PBXNativeTarget "MovingNumbersViewDemo-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				30D726062443C303002DEABD /* Debug */,
-				30D726072443C303002DEABD /* Release */,
+				308E63F62468B96A0054D0F3 /* Debug */,
+				308E63F72468B96A0054D0F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		30D726082443C303002DEABD /* Build configuration list for PBXNativeTarget "MovingNumbersView" */ = {
+		308E64152468BE640054D0F3 /* Build configuration list for PBXNativeTarget "MovingNumbersViewDemo-macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				30D726092443C303002DEABD /* Debug */,
-				30D7260A2443C303002DEABD /* Release */,
+				308E64162468BE640054D0F3 /* Debug */,
+				308E64172468BE640054D0F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_2 /* Build configuration list for PBXProject "MovingNumbersView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_3 /* Debug */,
+				OBJ_4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_27 /* Build configuration list for PBXNativeTarget "MovingNumbersView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_28 /* Debug */,
+				OBJ_29 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_34 /* Build configuration list for PBXNativeTarget "MovingNumbersViewPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_35 /* Debug */,
+				OBJ_36 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_40 /* Build configuration list for PBXAggregateTarget "MovingNumbersViewPackageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_41 /* Debug */,
+				OBJ_42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_45 /* Build configuration list for PBXNativeTarget "MovingNumbersViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_46 /* Debug */,
+				OBJ_47 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 30D725EC2443C302002DEABD /* Project object */;
+	rootObject = OBJ_1 /* Project object */;
 }
