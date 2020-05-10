@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:MovingNumberView.xcodeproj">
+      location = "self:/Users/aunn/coding/swift/opensource/MovingNumberView/MovingNumbersView.xcodeproj">
    </FileRef>
 </Workspace>

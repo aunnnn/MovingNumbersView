@@ -244,6 +244,7 @@ extension MovingNumbersView {
             .modifier(VerticalShift(
                 diffNumber: digit,
                 digitSpacing: verticalDigitSpacing))
+            .drawingGroup()
         return ds
     }
     
