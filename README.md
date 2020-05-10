@@ -1,11 +1,11 @@
 # MovingNumberView
 Moving numbers effect in SwiftUI.
 
-![Demo](https://raw.githubusercontent.com/aunnnn/MovingNumbersView/master/mvndemo2.gif)
+![Demo](https://raw.githubusercontent.com/aunnnn/MovingNumbersView/master/README-Resources/mvndemo2.gif)
 
 Custom element:
 
-![emojidemo](https://raw.githubusercontent.com/aunnnn/MovingNumbersView/master/mvnemoji.gif)
+![emojidemo](https://raw.githubusercontent.com/aunnnn/MovingNumbersView/master/README-Resources/mvnemoji.gif)
 
 Also used in the Robinhood-like line plot library [RHLinePlot](https://github.com/aunnnn/RHLinePlot).
 
@@ -46,11 +46,11 @@ Drag [MovingNumbersView.swift](https://github.com/aunnnn/MovingNumbersView/blob/
 
 Basically there are one view for each digit, comma, dot, and minus sign, all centered in a `HStack` by default. Check out [`VisualElementType`](https://github.com/aunnnn/MovingNumbersView/blob/master/MovingNumberView/MovingNumbersView%2BComponents.swift) enum.
 
-![Graph](https://raw.githubusercontent.com/aunnnn/MovingNumbersView/master/mvn-diagram.jpeg)
+![Graph](https://raw.githubusercontent.com/aunnnn/MovingNumbersView/master/README-Resources/mvn-diagram.jpeg)
 
 To show a number, we move only the vertical digit stack up and down to the right offset. Try removing the mask and see it in action:
 
-![How](https://raw.githubusercontent.com/aunnnn/MovingNumbersView/master/mvn-how.gif)
+![How](https://raw.githubusercontent.com/aunnnn/MovingNumbersView/master/README-Resources/mvn-how.gif)
 
 The digit is represented as 10-digit stack, and it's being moving up and down via `VerticalShift` geometry effect, which just offsets the digit stack by the current digit presented. (I believe the normal `transform/offset` might work too.)
 
