@@ -39,8 +39,8 @@ struct OldExampleView: View {
                 MovingNumbersView(
                     number: value,
                     numberOfDecimalPlaces: numberOfDecimalPlaces,
-                    verticalDigitSpacing: 0,
-                    fixedWidth: 300
+                    fixedWidth: 300,
+                    verticalDigitSpacing: 0
                 ) { s in
                     Text(s)
                         .fontWeight(.heavy)

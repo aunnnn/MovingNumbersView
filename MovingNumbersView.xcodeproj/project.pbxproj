@@ -19,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		309B2E6D2465296700465900 /* ExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleView.swift; sourceTree = "<group>"; };
+		309FDA252468B34600548351 /* MovingNumbersView.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MovingNumbersView.entitlements; sourceTree = "<group>"; };
 		30D725F42443C302002DEABD /* MovingNumbersView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovingNumbersView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30D725F72443C302002DEABD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30D725F92443C302002DEABD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,9 +42,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		309FDA262468B41500548351 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				309FDA272468B41E00548351 /* MovingNumbersView */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		309FDA272468B41E00548351 /* MovingNumbersView */ = {
+			isa = PBXGroup;
+			children = (
+				30D7260B2443C317002DEABD /* MovingNumbersView.swift */,
+			);
+			path = MovingNumbersView;
+			sourceTree = "<group>";
+		};
 		30D725EB2443C302002DEABD = {
 			isa = PBXGroup;
 			children = (
+				309FDA262468B41500548351 /* Source */,
+				309FDA252468B34600548351 /* MovingNumbersView.entitlements */,
 				30D725F62443C302002DEABD /* MovingNumbersViewDemo */,
 				30D725F52443C302002DEABD /* Products */,
 			);
@@ -60,7 +79,6 @@
 		30D725F62443C302002DEABD /* MovingNumbersViewDemo */ = {
 			isa = PBXGroup;
 			children = (
-				30D7260B2443C317002DEABD /* MovingNumbersView.swift */,
 				30D725F72443C302002DEABD /* AppDelegate.swift */,
 				30D725FB2443C302002DEABD /* OldExampleView.swift */,
 				309B2E6D2465296700465900 /* ExampleView.swift */,
@@ -84,9 +102,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		30D725F32443C302002DEABD /* MovingNumberView */ = {
+		30D725F32443C302002DEABD /* MovingNumbersView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 30D726082443C303002DEABD /* Build configuration list for PBXNativeTarget "MovingNumberView" */;
+			buildConfigurationList = 30D726082443C303002DEABD /* Build configuration list for PBXNativeTarget "MovingNumbersView" */;
 			buildPhases = (
 				30D725F02443C302002DEABD /* Sources */,
 				30D725F12443C302002DEABD /* Frameworks */,
@@ -96,7 +114,7 @@
 			);
 			dependencies = (
 			);
-			name = MovingNumberView;
+			name = MovingNumbersView;
 			productName = MovingNumberView;
 			productReference = 30D725F42443C302002DEABD /* MovingNumbersView.app */;
 			productType = "com.apple.product-type.application";
@@ -129,7 +147,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				30D725F32443C302002DEABD /* MovingNumberView */,
+				30D725F32443C302002DEABD /* MovingNumbersView */,
 			);
 		};
 /* End PBXProject section */
@@ -292,17 +310,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MovingNumbersView.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"MovingNumberView/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"MovingNumbersViewDemo/Preview Content\"";
 				DEVELOPMENT_TEAM = B786UKMNU5;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = MovingNumberView/Info.plist;
+				INFOPLIST_FILE = MovingNumbersViewDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.aunnnn.MovingNumbersView;
 				PRODUCT_NAME = MovingNumbersView;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -312,17 +333,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MovingNumbersView.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"MovingNumberView/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"MovingNumbersViewDemo/Preview Content\"";
 				DEVELOPMENT_TEAM = B786UKMNU5;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = MovingNumberView/Info.plist;
+				INFOPLIST_FILE = MovingNumbersViewDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.aunnnn.MovingNumbersView;
 				PRODUCT_NAME = MovingNumbersView;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -340,7 +364,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		30D726082443C303002DEABD /* Build configuration list for PBXNativeTarget "MovingNumberView" */ = {
+		30D726082443C303002DEABD /* Build configuration list for PBXNativeTarget "MovingNumbersView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				30D726092443C303002DEABD /* Debug */,

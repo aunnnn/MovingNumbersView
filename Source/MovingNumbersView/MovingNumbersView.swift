@@ -8,69 +8,52 @@
 
 import SwiftUI
 
-struct MovingNumbersView<Element: View>: View {
+public struct MovingNumbersView<Element: View>: View {
     /// The number to show.
-    let number: Double
+    public let number: Double
     
     /// Number of decimal places to show. If 0, will show integers (i.e. no dot or decimal)
     ///
     /// Note that we round up  before showing.
-    let numberOfDecimalPlaces: Int
+    public let numberOfDecimalPlaces: Int
     
     /// Space between each digit in the 10-digit vertical stack
-    var verticalDigitSpacing: CGFloat = 0
+    public var verticalDigitSpacing: CGFloat = 0
     
     /// Animation duration for the vertical digit stack to move up and down
-    var animationDuration: Double = 0.25
+    public var animationDuration: Double = 0.25
     
     /// Give a fixed width to the view. This would give better transition effect as digits are not clipped off.
-    var fixedWidth: CGFloat? = nil
+    public var fixedWidth: CGFloat? = nil
     
     /// Function to build digit, comma, and dot components
-    let elementBuilder: (String) -> Element
+    public let elementBuilder: (String) -> Element
     
-    var digitStackAnimation: Animation {
+    private var digitStackAnimation: Animation {
         Animation
             .easeOut(duration: animationDuration)
     }
     
-    var elementTransition: AnyTransition {
+    private var elementTransition: AnyTransition {
         AnyTransition.move(edge: .leading)
     }
     
-    func getWholeVisualElements(whole: Int) -> [VisualElementType] {
-        let wholeDigits = getAllDigitsInAscendingSignificance(number: whole)
-        var wholeElements: [VisualElementType] = []
-        
-        for (i, digit) in wholeDigits.enumerated() {
-            if i != 0 && i % 3 == 0 {
-                wholeElements.append(.comma(position: i+1))
-            }
-            wholeElements.append(.digit(digit, position: i+1))
-        }
-        return wholeElements
+    public init(number: Double,
+         numberOfDecimalPlaces: Int,
+         fixedWidth: CGFloat? = nil,
+         verticalDigitSpacing: CGFloat = 0,
+         animationDuration: Double = 0.25,
+         elementBuilder: @escaping (String) -> Element)
+    {
+        self.number = number
+        self.numberOfDecimalPlaces = numberOfDecimalPlaces
+        self.fixedWidth = fixedWidth
+        self.verticalDigitSpacing = verticalDigitSpacing
+        self.animationDuration = animationDuration
+        self.elementBuilder = elementBuilder
     }
     
-    func getFractionVisualElements(fraction: Double, numberOfDecimalPlaces: Int) -> [VisualElementType] {
-        var fractionElements: [VisualElementType] = []
-        let decimals = Int(round(fraction * pow(10.0, Double(numberOfDecimalPlaces))))
-        // [5, 4]
-        var fractionDigits = getAllDigitsInAscendingSignificance(number: decimals)
-        // Prepend with 0s that're gone when fraction is 0.
-        let numberOfAdditionalZeros = numberOfDecimalPlaces - fractionDigits.count
-        if numberOfAdditionalZeros > 0 {
-            fractionDigits.append(contentsOf: repeatElement(0, count: numberOfAdditionalZeros))
-        }
-        
-        // Work from least significant: [4, 5]
-        for (i, digit) in fractionDigits.reversed().enumerated() {
-            fractionElements.append(.decimalDigit(digit, position: i+1))
-        }
-        
-        return fractionElements
-    }
-    
-    func movingNumbersPlate() -> some View {
+    func movingNumbersView() -> some View {
         let isNegative = self.number < 0
         
         // Deal with positive first
@@ -85,21 +68,22 @@ struct MovingNumbersView<Element: View>: View {
         // Example: 123.45
         
         // Whole - 123
-        let wholeElements = getWholeVisualElements(whole: Int(whole)) // [3,2,1]
+        let wholeElements = getWholeVisualElements(whole: Int(whole))
+        // [3,2,1]
         
         let negativeElement: [VisualElementType] = isNegative ? [.minus] : []
         let allElements: [VisualElementType]
         
-        // Fraction
+        // If decimal
         if numberOfDecimalPlaces > 0 {
             // [4, 5]
-            let fractionElements = getFractionVisualElements(fraction: fraction, numberOfDecimalPlaces: numberOfDecimalPlaces)
+            let fractionElements = getDecimalVisualElements(fraction: fraction, numberOfDecimalPlaces: numberOfDecimalPlaces)
             allElements = negativeElement + wholeElements.reversed() + [.dot] + fractionElements
         } else {
             allElements = negativeElement + wholeElements.reversed()
         }
         
-        // All elements are centered (digit stack, comma, dot)
+        // All elements are by default vertically centered
         let finalResultView = HStack(alignment: .center, spacing: 0) {
             ForEach(allElements) { (element) in
                 self.viewFromElement(element)
@@ -109,9 +93,9 @@ struct MovingNumbersView<Element: View>: View {
         }
         .frame(width: fixedWidth, alignment: .leading)
         
-        // Debugging
-        //        print("All:", allElements)
-        //        print("Ids:", allElements.map { $0.id })
+        // For debugging
+        // print("All:", allElements)
+        // print("Ids:", allElements.map { $0.id })
         
         // PROBLEM: Final result view takes a big size
         // (i.e. 10-digit stack height, no. of digits width)
@@ -149,33 +133,12 @@ struct MovingNumbersView<Element: View>: View {
             .mask(Rectangle())
     }
     
-    var body: some View {
-        movingNumbersPlate()
+    public var body: some View {
+        movingNumbersView()
     }
 }
 
-/// Given an **non-negative** integer, extract all digits starting *from least to most significant position*, i.e. 123 -> [3,2,1]
-///
-/// Note that if `number` is negative, we use `abs(number)`.
-func getAllDigitsInAscendingSignificance(number: Int) -> [Int] {
-    if number == 0 {
-        return [0]
-    }
-    var rest = abs(number)
-    var digits: [Int] = []
-    while rest >= 10 {
-        let quotient = rest / 10
-        let d = rest - (quotient * 10)
-        digits.append(d)
-        rest = quotient
-    }
-    if rest != 0 {
-        digits.append(rest)
-    }
-    return digits
-}
-
-extension MovingNumbersView {
+private extension MovingNumbersView {
     enum VisualElementType: CustomDebugStringConvertible, Identifiable {
         case digit(Int, position: Int)
         case comma(position: Int)
@@ -295,9 +258,65 @@ extension MovingNumbersView {
             ))
         }
     }
+    
+    /// Get visual elements for the whole number part
+    /// i.e. 1234 -> 1,234
+    func getWholeVisualElements(whole: Int) -> [VisualElementType] {
+        let wholeDigits = getAllDigitsInAscendingSignificance(number: whole)
+        var wholeElements: [VisualElementType] = []
+        
+        for (i, digit) in wholeDigits.enumerated() {
+            if i != 0 && i % 3 == 0 {
+                wholeElements.append(.comma(position: i+1))
+            }
+            wholeElements.append(.digit(digit, position: i+1))
+        }
+        return wholeElements
+    }
+    
+    /// Get visual elements for the decimal parts
+    func getDecimalVisualElements(fraction: Double, numberOfDecimalPlaces: Int) -> [VisualElementType] {
+        var fractionElements: [VisualElementType] = []
+        let decimals = Int(round(fraction * pow(10.0, Double(numberOfDecimalPlaces))))
+        // [5, 4]
+        var fractionDigits = getAllDigitsInAscendingSignificance(number: decimals)
+        // Prepend with 0s that're gone when fraction is 0.
+        let numberOfAdditionalZeros = numberOfDecimalPlaces - fractionDigits.count
+        if numberOfAdditionalZeros > 0 {
+            fractionDigits.append(contentsOf: repeatElement(0, count: numberOfAdditionalZeros))
+        }
+        
+        // Work from least significant: [4, 5]
+        for (i, digit) in fractionDigits.reversed().enumerated() {
+            fractionElements.append(.decimalDigit(digit, position: i+1))
+        }
+        
+        return fractionElements
+    }
 }
 
-func round(_ number: Double, numPlaces: Int) -> Double {
+/// Given an **non-negative** integer, extract all digits starting *from least to most significant position*, i.e. 123 -> [3,2,1]
+///
+/// Note that if `number` is negative, we use `abs(number)`.
+private func getAllDigitsInAscendingSignificance(number: Int) -> [Int] {
+    if number == 0 {
+        return [0]
+    }
+    var rest = abs(number)
+    var digits: [Int] = []
+    while rest >= 10 {
+        let quotient = rest / 10
+        let d = rest - (quotient * 10)
+        digits.append(d)
+        rest = quotient
+    }
+    if rest != 0 {
+        digits.append(rest)
+    }
+    return digits
+}
+
+private func round(_ number: Double, numPlaces: Int) -> Double {
     let power = pow(10.0, Double(numPlaces))
     return round(number * power)/power
 }
