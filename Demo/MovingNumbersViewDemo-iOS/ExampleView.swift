@@ -16,6 +16,7 @@ struct ExampleView: View {
     @State private var decimalPlaces = 2
     @State private var isEmojiMode = false
     @State private var isBlurEdges = false
+    @State private var isFixedWidth = true
     
     private let presets: [Double] = [
         1,
@@ -54,7 +55,7 @@ struct ExampleView: View {
                     MovingNumbersView(
                         number: number,
                         numberOfDecimalPlaces: decimalPlaces,
-                        fixedWidth: 350) { str in
+                        fixedWidth: isFixedWidth ? 350 : nil) { str in
                             Text(self.isEmojiMode ? self.customLabelMapping(str) : str)
                                 .font(.largeTitle)
                                 .fontWeight(.heavy)
@@ -71,6 +72,9 @@ struct ExampleView: View {
                     }
                     Toggle(isOn: $isBlurEdges) {
                         Text("Apply gradient at vertical edges")
+                    }
+                    Toggle(isOn: $isFixedWidth) {
+                        Text("Fixed Width? (Recommended)")
                     }
                 }
                 
