@@ -45,7 +45,10 @@ Optional parameters are `fixedWidth`*, `verticalDigitSpacing`, and `animationDur
 It will also leading align the digits, otherwise with the default value (`nil`), the `MovingNumbersView` will shrink and expand at the center since its size depends on the number of current visual elements and make the transitioning weird. While this could be fixed by putting it under a `VStack` with leading alignment, the former cropping problem is still there.
 
 ## Installation
-Drag [MovingNumbersView.swift](https://github.com/aunnnn/MovingNumbersView/blob/master/Sources/MovingNumbersView/MovingNumbersView.swift) to your project. Use and customize however you like.
+
+### Swift Package Manager
+
+Go to **File → Swift Packages → Add Package Dependency** then put the repo URL (https://github.com/aunnnn/MovingNumbersView.git).
 
 ## How it was done
 
