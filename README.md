@@ -17,6 +17,11 @@ Also used in the Robinhood-like line plot library [RHLinePlot](https://github.co
 - Support commas
 - Support negative numbers
 
+## Requirements
+- iOS 13, macOS 10.15
+- Swift 5.1
+- Xcode 11
+
 ## Usage
 
 Initialize it with `number`, `numberOfDecimalPlaces`, and trailing closure `elementBuilder`:
