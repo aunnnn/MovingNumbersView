@@ -1,4 +1,4 @@
-# MovingNumberView
+# MovingNumbersView
 Moving numbers effect in SwiftUI.
 
 ![Demo](https://raw.githubusercontent.com/aunnnn/MovingNumbersView/master/README-Resources/mvndemo2.gif)
@@ -22,10 +22,18 @@ Also used in the Robinhood-like line plot library [RHLinePlot](https://github.co
 - Swift 5.1
 - Xcode 11
 
+## Installation
+
+### Swift Package Manager
+
+Go to **File → Swift Packages → Add Package Dependency** then put the repo URL (https://github.com/aunnnn/MovingNumbersView.git).
+
 ## Usage
 
 Initialize it with `number`, `numberOfDecimalPlaces`, and trailing closure `elementBuilder`:
 ```swift
+import MovingNumbersView
+
 MovingNumbersView(
     number: 123.456,
     numberOfDecimalPlaces: 3) { str in
@@ -62,9 +70,6 @@ MovingNumbersView(...)
 ```
 
 ![gradientdemo](https://raw.githubusercontent.com/aunnnn/MovingNumbersView/master/README-Resources/mvngradient.gif)
-
-## Installation
-Drag [MovingNumbersView.swift](https://github.com/aunnnn/MovingNumbersView/blob/master/Sources/MovingNumbersView/MovingNumbersView.swift) to your project. Use and customize however you like.
 
 ## How it was done
 
