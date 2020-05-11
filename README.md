@@ -56,6 +56,8 @@ It will also leading align the digits, otherwise with the default value (`nil`),
 
 ### Blurring out top and bottom edges
 
+![gradientdemo](https://raw.githubusercontent.com/aunnnn/MovingNumbersView/master/README-Resources/mvngradient.gif)
+
 To have the top and bottom edges look blurry, simply apply a gradient mask on the `MovingNumbersView`:
 ```swift
 MovingNumbersView(...)
@@ -68,8 +70,6 @@ MovingNumbersView(...)
         startPoint: .top,
         endPoint: .bottom))
 ```
-
-![gradientdemo](https://raw.githubusercontent.com/aunnnn/MovingNumbersView/master/README-Resources/mvngradient.gif)
 
 ## How it was done
 
