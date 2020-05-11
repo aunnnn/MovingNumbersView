@@ -10,6 +10,8 @@ import SwiftUI
 
 @available(iOS 13.0, OSX 10.15, *)
 public struct MovingNumbersView<Element: View>: View {
+    public typealias ElementBuilder = (String) -> Element
+    
     /// The number to show.
     public let number: Double
     
@@ -28,7 +30,7 @@ public struct MovingNumbersView<Element: View>: View {
     public var fixedWidth: CGFloat? = nil
     
     /// Function to build digit, comma, and dot components
-    public let elementBuilder: (String) -> Element
+    public let elementBuilder: ElementBuilder
     
     private var digitStackAnimation: Animation {
         Animation
@@ -44,7 +46,7 @@ public struct MovingNumbersView<Element: View>: View {
          fixedWidth: CGFloat? = nil,
          verticalDigitSpacing: CGFloat = 0,
          animationDuration: Double = 0.25,
-         elementBuilder: @escaping (String) -> Element)
+         elementBuilder: @escaping ElementBuilder)
     {
         self.number = number
         self.numberOfDecimalPlaces = numberOfDecimalPlaces
@@ -102,29 +104,16 @@ public struct MovingNumbersView<Element: View>: View {
         // (i.e. 10-digit stack height, no. of digits width)
         // We want the final layout of the view to be just like
         // its appearance, i.e. A couple of Texts in HStack.
-        
+        //
         // HACK: Make a stand-in estimated view for layout.
         // So this allows us to treat this view almost like Text
         //
         // TODO: Is there a better way to calculate layout correctly?
         // Would `PreferenceKey` works?
-        let estimatedView = HStack(spacing: 0) {
-            ForEach(allElements) { el -> Element in
-                switch el {
-                case .minus:
-                    return self.elementBuilder("-")
-                case .dot:
-                    return self.elementBuilder(".")
-                case .comma:
-                    return self.elementBuilder(",")
-                case .digit, .decimalDigit:
-                    // This column takes the widest one.
-                    // We estimate it to be 9.
-                    return self.elementBuilder("9")
-                }
-            }
-        }
-        .frame(width: fixedWidth)
+        let estimatedView = MovingNumbersViewEstimatedSize(
+            allElements: allElements,
+            elementBuilder: elementBuilder)
+            .frame(width: fixedWidth)
         
         return estimatedView
             .opacity(0)
@@ -206,10 +195,10 @@ private extension MovingNumbersView {
         let ds = TenDigitStack(
             spacing: verticalDigitSpacing,
             elementBuilder: elementBuilder)
+            .drawingGroup()
             .modifier(VerticalShift(
                 diffNumber: digit,
                 digitSpacing: verticalDigitSpacing))
-            .drawingGroup()
         return ds
     }
     
@@ -228,7 +217,7 @@ private extension MovingNumbersView {
     /// A vertical stack of 9 -> 0.
     struct TenDigitStack: View {
         var spacing: CGFloat? = nil
-        let elementBuilder: (String) -> Element
+        let elementBuilder: ElementBuilder
         var body: some View {
             VStack(alignment: .center, spacing: spacing) {
                 ForEach((0...9).reversed(), id: \.self) { iDigit in
@@ -241,8 +230,9 @@ private extension MovingNumbersView {
         }
     }
     
+    /// Make the digit stack moves up and down if the diffNumber changes.
     struct VerticalShift: GeometryEffect {
-        var diffNumber: CGFloat
+        var diffNumber: CGFloat // 0 to 9 only
         let digitSpacing: CGFloat
         
         var animatableData: CGFloat {
@@ -294,6 +284,34 @@ private extension MovingNumbersView {
         }
         
         return fractionElements
+    }
+}
+
+@available(iOS 13.0, OSX 10.15, *)
+private extension MovingNumbersView {
+    struct MovingNumbersViewEstimatedSize: View {
+        
+        let allElements: [VisualElementType]
+        let elementBuilder: ElementBuilder
+        
+        var body: some View {
+            HStack(spacing: 0) {
+                ForEach(self.allElements) { el -> Element in
+                    switch el {
+                    case .minus:
+                        return self.elementBuilder("-")
+                    case .dot:
+                        return self.elementBuilder(".")
+                    case .comma:
+                        return self.elementBuilder(",")
+                    case .digit, .decimalDigit:
+                        // This column takes the widest one.
+                        // We estimate it to be 9.
+                        return self.elementBuilder("9")
+                    }
+                }
+            }
+        }
     }
 }
 
