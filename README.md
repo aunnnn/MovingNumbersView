@@ -50,7 +50,13 @@ The `elementBuilder: (String) -> some View` will be used by the library to build
 
 Optional parameters are `fixedWidth`*, `verticalDigitSpacing`, and `animationDuration`. `verticalDigitSpacing` allows you to control the spacing between digits in the vertical digit stack, and `animationDuration` is the duration for the vertical digit stack to move up and down.
 
-`fixedWidth: CGFloat?` is optional but important. It will give a fixed width to the label to give space for digit transitioning. Without it, when the last few digits are moving in and out, *the label frame shrinks faster that the transition* so you could see them getting cropped out. Setting this value will help make the transition/animation effect looks better. 
+`fixedWidth: CGFloat?` is optional but important. It will give a fixed width to the label to give space for digit transitioning. Without it, when the last few digits are moving in and out, *the label frame shrinks faster that the transition* so you could see them getting cropped out:
+
+![notfixedwidth](https://raw.githubusercontent.com/aunnnn/MovingNumbersView/master/README-Resources/notfixedwidthdemo.gif)
+
+Setting fixed width will prevent the frame to shrink, and makes the transition/animation effect looks better:
+
+![fixedwidth](https://raw.githubusercontent.com/aunnnn/MovingNumbersView/master/README-Resources/fixedwidthdemo.gif)
 
 It will also leading align the digits, otherwise with the default value (`nil`), the `MovingNumbersView` will shrink and expand at the center since its size depends on the number of current visual elements and make the transitioning weird. While this could be fixed by putting it under a `VStack` with leading alignment, the former cropping problem is still there.
 
