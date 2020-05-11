@@ -1,4 +1,4 @@
-# MovingNumberView
+# MovingNumbersView
 Moving numbers effect in SwiftUI.
 
 ![Demo](https://raw.githubusercontent.com/aunnnn/MovingNumbersView/master/README-Resources/mvndemo2.gif)
@@ -26,6 +26,8 @@ Also used in the Robinhood-like line plot library [RHLinePlot](https://github.co
 
 Initialize it with `number`, `numberOfDecimalPlaces`, and trailing closure `elementBuilder`:
 ```swift
+import MovingNumbersView
+
 MovingNumbersView(
     number: 123.456,
     numberOfDecimalPlaces: 3) { str in
