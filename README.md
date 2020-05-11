@@ -60,6 +60,8 @@ Setting fixed width will prevent the frame to shrink, and makes the transition/a
 
 This will also *leading align* the digits. With the default value (`nil`), the `MovingNumbersView` will shrink and expand at its own center, since its size depends on the number of current visual elements and make the transitioning weird. While this could be fixed by using extra `VStack` with leading alignment, the former cropping problem is still there.
 
+P.S. Another way to solve it is to put a couple of invisible digit(s) at the end, so it has some extra space to transition out. It kind of work, but probably won't scale if multiple digits are gone simultaneously (like 1,234,567 -> 0).
+
 ### Blurring out top and bottom edges
 
 ![gradientdemo](https://raw.githubusercontent.com/aunnnn/MovingNumbersView/master/README-Resources/mvngradient.gif)
