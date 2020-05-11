@@ -101,6 +101,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		303E72992469F63B00F5A9E1 /* mvngradient.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = mvngradient.gif; sourceTree = "<group>"; };
 		308E63E42468B9690054D0F3 /* MovingNumbersViewDemo-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MovingNumbersViewDemo-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		308E64052468BE610054D0F3 /* MovingNumbersViewDemo-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MovingNumbersViewDemo-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		308E64202468C1120054D0F3 /* ExampleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleView.swift; sourceTree = "<group>"; };
@@ -173,6 +174,7 @@
 		308E63DF2468B8740054D0F3 /* README-Resources */ = {
 			isa = PBXGroup;
 			children = (
+				303E72992469F63B00F5A9E1 /* mvngradient.gif */,
 				OBJ_19 /* mvn-diagram.jpeg */,
 				OBJ_20 /* mvn-how.gif */,
 				OBJ_21 /* mvnemoji.gif */,

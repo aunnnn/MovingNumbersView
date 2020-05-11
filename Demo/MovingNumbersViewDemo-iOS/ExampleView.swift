@@ -15,6 +15,7 @@ struct ExampleView: View {
     @State private var number: Double = 0
     @State private var decimalPlaces = 2
     @State private var isEmojiMode = false
+    @State private var isBlurEdges = false
     
     private let presets: [Double] = [
         1,
@@ -30,6 +31,22 @@ struct ExampleView: View {
         1_234_567
     ]
     
+    var movingNumbersMask: some View {
+        if isBlurEdges {
+            // Make blurring-out top and bottom edges
+            return AnyView(LinearGradient(
+                gradient: Gradient(stops: [
+                    Gradient.Stop(color: .clear, location: 0),
+                    Gradient.Stop(color: .black, location: 0.2),
+                    Gradient.Stop(color: .black, location: 0.8),
+                    Gradient.Stop(color: .clear, location: 1.0)]),
+                startPoint: .top,
+                endPoint: .bottom))
+        } else {
+            return AnyView(Rectangle())
+        }
+    }
+    
     var body: some View {
         VStack {
             Form {
@@ -42,6 +59,7 @@ struct ExampleView: View {
                                 .font(.largeTitle)
                                 .fontWeight(.heavy)
                     }
+                    .mask(movingNumbersMask)
                 }
                 
                 Section {
@@ -50,6 +68,9 @@ struct ExampleView: View {
                     Stepper("Decimal: \(decimalPlaces)", value: $decimalPlaces, in: (0...10))
                     Toggle(isOn: $isEmojiMode) {
                         Text("Emoji?")
+                    }
+                    Toggle(isOn: $isBlurEdges) {
+                        Text("Apply gradient at vertical edges")
                     }
                 }
                 
