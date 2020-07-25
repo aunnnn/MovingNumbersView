@@ -95,6 +95,7 @@ public struct MovingNumbersView<Element: View>: View {
             }
         }
         .frame(width: fixedWidth, alignment: .leading)
+        .border(Color.red)
         
         // For debugging
         // print("All:", allElements)
@@ -113,14 +114,15 @@ public struct MovingNumbersView<Element: View>: View {
         let estimatedView = MovingNumbersViewEstimatedSize(
             allElements: allElements,
             elementBuilder: elementBuilder)
-            .frame(width: fixedWidth)
+            .frame(width: fixedWidth, alignment: .leading)
         
         return estimatedView
-            .opacity(0)
+            .opacity(0.1)
             .overlay(
                 finalResultView,
                 alignment: .leading)
             .mask(Rectangle())
+            .border(Color.blue)
     }
     
     public var body: some View {
@@ -289,26 +291,31 @@ private extension MovingNumbersView {
 
 @available(iOS 13.0, OSX 10.15, *)
 private extension MovingNumbersView {
+    /// View that has roughly  the same size of the original MovingNumbersView. This will be the actual size which the actual content is overlaid on.
     struct MovingNumbersViewEstimatedSize: View {
         
         let allElements: [VisualElementType]
         let elementBuilder: ElementBuilder
         
+        func buildDummyElement(_ originalElement: VisualElementType) -> some View {
+            switch originalElement {
+            case .minus:
+                return self.elementBuilder("-")
+            case .dot:
+                return self.elementBuilder(".")
+            case .comma:
+                return self.elementBuilder(",")
+            case .digit, .decimalDigit:
+                // This column takes the widest one.
+                // We estimate it to be 9.
+                return self.elementBuilder("9")
+            }
+        }
+        
         var body: some View {
             HStack(spacing: 0) {
-                ForEach(self.allElements) { el -> Element in
-                    switch el {
-                    case .minus:
-                        return self.elementBuilder("-")
-                    case .dot:
-                        return self.elementBuilder(".")
-                    case .comma:
-                        return self.elementBuilder(",")
-                    case .digit, .decimalDigit:
-                        // This column takes the widest one.
-                        // We estimate it to be 9.
-                        return self.elementBuilder("9")
-                    }
+                ForEach(self.allElements) { el in
+                    self.buildDummyElement(el)
                 }
             }
         }

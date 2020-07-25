@@ -24,6 +24,10 @@ Also used in the Robinhood-like line plot library [RHLinePlot](https://github.co
 
 ## Installation
 
+### Cocoapods
+
+`pod install MovingNumbersView`
+
 ### Swift Package Manager
 
 Go to **File → Swift Packages → Add Package Dependency** then put the repo URL (https://github.com/aunnnn/MovingNumbersView.git).

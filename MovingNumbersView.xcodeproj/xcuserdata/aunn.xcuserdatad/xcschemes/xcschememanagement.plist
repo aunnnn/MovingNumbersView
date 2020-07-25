@@ -19,6 +19,16 @@
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
+		<key>MovingNumbersViewDemo-watchOS WatchKit Extension.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>MovingNumbersViewDemo-watchOS.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 		<key>MovingNumbersViewDemo.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
@@ -27,6 +37,21 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>305578B9246E5F8800DFEF8C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>305578BC246E5F8800DFEF8C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>305578CB246E5F8C00DFEF8C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>308E63E32468B9690054D0F3</key>
 		<dict>
 			<key>primary</key>
